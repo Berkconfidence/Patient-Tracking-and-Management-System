@@ -33,7 +33,6 @@ def get_appointment_status_api():
 def doctor_schedule(doctor_id):
     return render_template('doctor_schedule.html', doctor_id=doctor_id)
 
-# Randevu durumu kontrol eden fonksiyon
 def get_appointment_status(doctor_id, date, hour):
     appointment_record = appointment.query.filter_by(
         doctorID=doctor_id,
